@@ -32,7 +32,7 @@ reply_tweet <- function(tweet) {
   new_img <- to_ggplot(img_url, x_points, y_points, n_colors, title)
   suppressMessages(post_tweet(
     status = random_message(),
-    media = new_img,
+    media = new_img$file,
     in_reply_to_status_id = tweet$status_id
   ))
 }

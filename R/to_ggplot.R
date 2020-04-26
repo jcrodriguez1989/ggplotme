@@ -51,5 +51,5 @@ to_ggplot <- function(img_url, x_points = NA, y_points = NA, n_colors = NA,
     ggtitle(title)
   out_file <- tempfile(fileext = ".png")
   suppressMessages(ggsave(out_file, ggp))
-  out_file
+  list(file = out_file, plot = ggp)
 }

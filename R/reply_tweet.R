@@ -33,6 +33,7 @@ reply_tweet <- function(tweet) {
   suppressMessages(post_tweet(
     status = random_message(),
     media = new_img$file,
-    in_reply_to_status_id = tweet$status_id
+    in_reply_to_status_id = tweet$status_id,
+    auto_populate_reply_metadata = TRUE
   ))
 }

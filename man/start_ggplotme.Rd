@@ -7,7 +7,8 @@
 start_ggplotme(
   user = "@ggplotme",
   from_time = Sys.time(),
-  sleep_secs = 15 * 60
+  sleep_secs = 15 * 60,
+  rtweet_token_file = NULL
 )
 }
 \arguments{
@@ -16,6 +17,9 @@ start_ggplotme(
 \item{from_time}{A POSIXct indicating minimum tweets time to attend.}
 
 \item{sleep_secs}{Numeric indicating the seconds to sleep between execution.}
+
+\item{rtweet_token_file}{A character with the file path of an rds file with
+the rtweet token to be used. If NULL, it will load the default token.}
 }
 \description{
 Starts the server, will be executing until it is aborted Ctrl+c .
